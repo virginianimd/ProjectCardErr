@@ -21,8 +21,8 @@
         <td><%= card.title %></td>
         <td><%= card.content %></td>
         <td><%= card.tipe %></td>
-        <td><%= card.user_id %></td>
-        <td><%= card.board_id %></td>
+        <td><%= card.user.email %></td>
+        <td><%= card.board.title %></td>
         <td><%= card.status %></td>
         <td><%= link_to 'Show', card %></td>
         <td><%= link_to 'Edit', edit_card_path(card) %></td>
