@@ -4,12 +4,13 @@ class BoardsController < ApplicationController
   # GET /boards
   # GET /boards.json
   def index
-    @boards = Board.all
+    @boards = Board.select{|b| b.user_id == current_user.id}
   end
 
   # GET /boards/1
   # GET /boards/1.json
   def show
+    
   end
 
   # GET /boards/new

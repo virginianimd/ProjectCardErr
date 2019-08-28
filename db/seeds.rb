@@ -32,7 +32,7 @@ Card.create([
     board_id: board.id,
     status: 0
 
-  },
+  }
 
 
 ])

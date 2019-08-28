@@ -27,13 +27,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.label :user_id, :value => current_user.username %>
+    <%= form.hidden_field :user_id, :value => current_user.id %>
   </div>
 
   <div class="field">
     <%= form.label :board_id %>
-    <%= form.number_field :board_id %>
+    <%= form.number_field :board_id, :value => 5 %>
   </div>
 
   <div class="field">
