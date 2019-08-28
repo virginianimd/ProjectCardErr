@@ -1,0 +1,2 @@
+class BoardmemberController < ApplicationController
+end
