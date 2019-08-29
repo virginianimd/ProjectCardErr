@@ -48,7 +48,7 @@ class BoardmembersController < ApplicationController
         format.html { render :edit }
         format.json { render json: @boardmember.errors, status: :unprocessable_entity }
       end
-  
+    end
   end
 
   # DELETE /boardmembers/1
@@ -71,5 +71,4 @@ class BoardmembersController < ApplicationController
     def boardmember_params
       params.require(:boardmember).permit(:board_id, :user_id, :role)
     end
-end
 end

@@ -17,7 +17,7 @@ class BoardmembersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create boardmember" do
     assert_difference('Boardmember.count') do
-      post boardmembers_url, params: { boardmember: { board_id: @boardmember.board_id,  user_id: @boardmember.user_id, role: @boardmember.role } }
+      post boardmembers_url, params: { boardmember: { board_id: @boardmember.board_id, user_id: @boardmember.user_id, role: @boardmember.role } }
     end
 
     assert_redirected_to boardmember_url(Boardmember.last)
@@ -34,7 +34,7 @@ class BoardmembersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update boardmember" do
-    patch boardmember_url(@boardmember), params: { boardmember: { board_id: @boardmember.board_id,  user_id: @boardmember.user_id, role: @boardmember.role } }
+    patch boardmember_url(@boardmember), params: { boardmember: { board_id: @boardmember.board_id, user_id: @boardmember.user_id, role: @boardmember.role } }
     assert_redirected_to boardmember_url(@boardmember)
   end
 
