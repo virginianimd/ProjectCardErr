@@ -15,8 +15,8 @@
   <tbody>
     <% @boardmembers.each do |boardmember| %>
       <tr>
-        <td><%= boardmember.user_id %></td>
-        <td><%= boardmember.board_id %></td>
+        <td><%= boardmember.user.username %></td>
+        <td><%= boardmember.board.title %></td>
         <td><%= boardmember.role %></td>
         <td><%= link_to 'Edit', edit_boardmember_path(boardmember) %></td>
         <td><%= link_to 'Destroy', boardmember, method: :delete, data: { confirm: 'Are you sure?' } %></td>

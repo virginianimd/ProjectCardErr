@@ -4,7 +4,7 @@ class BoardmembersController < ApplicationController
   # GET /boardmembers
   # GET /boardmembers.json
   def index
-    @boardmembers = Boardmember.all
+    @boardmembers = Boardmember.select{|b| b.user_id == current_user.id}
   end
 
   # GET /boardmembers/1

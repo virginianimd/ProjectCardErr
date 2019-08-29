@@ -12,19 +12,18 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+   <%= form.hidden_field :user_id, :value => current_user.id %>
   </div>
 
   <div class="field">
-    <%= form.label :board_id %>
-    <%= form.number_field :board_id %>
-  </div>
+  <%= form.label :board_id %>
+  <%= form.text_field :board_id %>
+</div>
 
   <div class="field">
-    <%= form.label :role %>
-    <%= form.number_field :role %>
-  </div>
+  <%= form.label :role %>
+  <%= form.text_field :role %>
+</div>
 
   <div class="actions">
     <%= form.submit %>
