@@ -1,34 +1,43 @@
-<h2>Sign up</h2>
+<div class="container text-left h-100 align-items-center" style= height:auto;>
+  <div class="d-flex justify-content-center">
+    <div class="user_card ">
+<br />
+<h2>Sign Up</h2><br />
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+ 
+ <div class="field col-lg-offset-4">
+    <%= f.text_field :username, placeholder:"Username", class:'form-control'%>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  <div class="field col-lg-offset-4">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email Address", class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+  <div class="field col-lg-offset-4">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:"Your New Password", class:'form-control'%>
+   <% if @minimum_password_length %>
+    <em style="font-size: 11px;">*(<%=  @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="field col-lg-offset-4">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"Confirm New Password", class:'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <div class="actions col-lg-offset-4">
+    <%= f.submit "Sign up", :class =>"btn btn-success btn-lg btn-block" %>
   </div>
 <% end %>
 
+ <h6> Already have account? 
+<%- if controller_name != 'sessions' %>
+  <%= link_to "Sign In", new_session_path(resource_name) %><br />
+<% end %>
+</h6>
+
 <%= render "devise/shared/links" %>
+    </div>
+  </div>
+</div>
