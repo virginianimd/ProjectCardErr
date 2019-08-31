@@ -13,6 +13,7 @@
   <body>
   <% if !user_signed_in? %>
     <%= render 'home/notif'  %>
+  
     
       <div id="page-content-wrapper">
         <div class="container-fluid">
@@ -24,7 +25,7 @@
         </div>
       </div> 
     <% else %>
-    <%= render 'home/sidebar'  %>
+    <%= render 'devise/shared/navbar' %>
     <%= render 'home/notif'  %>
     
       <div id="page-content-wrapper">
