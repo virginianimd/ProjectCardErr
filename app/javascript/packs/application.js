@@ -11,6 +11,11 @@ require("channels")
 import "bootstrap"
 import '../stylesheets/application'
 
+$(document).ready(function(){
+    $('#sidebarCollapse').on('click',function(){
+        $('#sidebar').toggleClass('active');
+    });
+}); 
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

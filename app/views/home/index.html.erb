@@ -1,12 +1,42 @@
+ <button class="btn btn-success" style="margin-left:5px;">New Project</button>
+    <hr id="cost3">
+    <br>
+    <div class="row-3" style="margin-left:50px; ">
+        <div class="card col-md-3">
+            <div class="card-title">
+                <h4 align="center">My Project</h4>
+            </div>
+        </div>
+        <div class="card col-md-3  ">
+            &nbsp;
+          <% @boards.each do |board| %>
+            <div class="accordion" id="accordionExample<%= board.id %>">
+                 <div class="card">
+                
+                    <div class="card-header" id="headingOne<%= board.id %>">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne<%= board.id %>" aria-expanded="true" aria-controls="collapseOne<%= board.id %>">
+                              <%= board.title %>
+                          </button>
+                        </h2>
+                    </div>
 
-<div class="card border-primary mb-3" style="max-width: 18rem;">
+                    <div id="collapseOne<%= board.id %>" class="collapse show" aria-labelledby="headingOne<%= board.id %>" data-parent="#accordionExample<%= board.id %>">
+                        <div class="card-body">
+                             <%= board.description %>
+                        </div>
+                    </div>
+                  
 
-<div class="card-header">Header</div>
-<div class="card-body text-primary">
-  <h5 class="card-title">Primary card title</h5>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-</div>
-</div>
+                </div>
+                &nbsp;
+            </div>
+          <% end %>
+
+        </div>
+
+        
+    </div>
 
 
 

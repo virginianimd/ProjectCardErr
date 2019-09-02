@@ -3,11 +3,11 @@
   <head>
     <%= render 'structure/head' %>
   </head>
-
   <body>
-  <% if !user_signed_in? %>
-    <%= render 'structure/notif'  %>
-  
+    <% if !user_signed_in? %>
+      <div class="row">
+        <%= render 'structure/notif'  %>
+      </div>
       <div id="page-content-wrapper">
         <div class="container-fluid">
           <div class="row">
@@ -18,20 +18,14 @@
         </div>
       </div> 
     <% else %>
-      <%= render 'structure/navbar' %>
       <%= render 'structure/sidebar'%>
-      <%= render 'structure/notif'  %>
-
-    
-      <div id="page-content-wrapper">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12">
-              <%= yield %>
-            </div>
+        <div class="row" style= "margin-top: -20px;">
+          <%= render 'structure/notif'  %>
+        </div>
+          <div class="container-fluid">
+            <%= yield %>
           </div>
         </div>
-      </div> 
-  <% end %>
+    <% end %>
   </body>
 </html>
