@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ProjectM</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'structure/head' %>
   </head>
 
   <body>
   <% if !user_signed_in? %>
-    <%= render 'home/notif'  %>
+    <%= render 'structure/notif'  %>
   
-    
       <div id="page-content-wrapper">
         <div class="container-fluid">
           <div class="row">
@@ -25,8 +18,10 @@
         </div>
       </div> 
     <% else %>
-    <%= render 'devise/shared/navbar' %>
-    <%= render 'home/notif'  %>
+      <%= render 'structure/navbar' %>
+      <%= render 'structure/sidebar'%>
+      <%= render 'structure/notif'  %>
+
     
       <div id="page-content-wrapper">
         <div class="container-fluid">
