@@ -19,13 +19,13 @@
       </div> 
     <% else %>
       <%= render 'structure/sidebar'%>
-        <div class="row" style= "margin-top: -20px;">
+      <div class="wrapper">
+          <div class="container-fluid" id="contain">
           <%= render 'structure/notif'  %>
-        </div>
-          <div class="container-fluid">
             <%= yield %>
           </div>
         </div>
+      </div>
     <% end %>
   </body>
 </html>

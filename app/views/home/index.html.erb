@@ -1,42 +1,54 @@
- <button class="btn btn-success" style="margin-left:5px;">New Project</button>
-    <hr id="cost3">
+<%= link_to 'New Board', new_board_path, class:'btn btn-success' %>
+  <hr id="cost3">
     <br>
-    <div class="row-3" style="margin-left:50px; ">
-        <div class="card col-md-3">
-            <div class="card-title">
-                <h4 align="center">My Project</h4>
-            </div>
+      <div class="row-3" style="margin-left:50px; ">
+        <div class="card col-md-8">
+          <div class="card-title">
+            <h4 align ="center">My Project</h4>
+          </div>
         </div>
-        <div class="card col-md-3  ">
-            &nbsp;
-          <% @boards.each do |board| %>
-            <div class="accordion" id="accordionExample<%= board.id %>">
-                 <div class="card">
-                
-                    <div class="card-header" id="headingOne<%= board.id %>">
-                        <h2 class="mb-0">
-                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne<%= board.id %>" aria-expanded="true" aria-controls="collapseOne<%= board.id %>">
-                              <%= board.title %>
-                          </button>
-                        </h2>
-                    </div>
-
-                    <div id="collapseOne<%= board.id %>" class="collapse show" aria-labelledby="headingOne<%= board.id %>" data-parent="#accordionExample<%= board.id %>">
-                        <div class="card-body">
-                             <%= board.description %>
-                        </div>
-                    </div>
-                  
-
-                </div>
-                &nbsp;
-            </div>
-          <% end %>
-
-        </div>
-
         
-    </div>
+        &nbsp; 
+        <div class = "row">
+        <div class = "col-md-10">
+            <div class = "boards" >
+      <% @boards.each do |board| %>
+              <ul id="popover-content" class="list-group" style="display: none">
+                <a><%= link_to 'Edit', edit_board_path(board) %></a>
+                <a href="#" class="list-group-item">Invite Members</a>
+                <a class= "list-group-item"><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></a>
+              </ul>
+          <div class = board>
+          <div class="card col-md-12 ">
+          <a data-toggle="popover" title="Action" style= "text-align: right">:::</a>
+            &nbsp;  
+              <div class="accordion" id="accordionExample<%= board.id %>">
+                <div class="card">               
+                  <div class="card-header" id="headingOne<%= board.id %>">
+                    <h2 class="mb-0">
+                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne<%= board.id %>" aria-expanded="true" aria-controls="collapseOne<%= board.id %>">
+                        <%= board.title %>
+                      </button>
+                    </h2>
+                  </div>
+                  
+                    <div id="collapseOne<%= board.id %>" class="collapse show" aria-labelledby="headingOne<%= board.id %>" data-parent="#accordionExample<%= board.id %>">
+                      <div class="card-body">
+                        <%= board.description %>
+                      </div>
+                    </div>
+                  </div>
+                    &nbsp;
+              </div>
+              </div>
+              </div>
+            <% end %>
+            </div>
+          </div>
+          </div>
+          </div>
+          </div>
+ 
 
 
 

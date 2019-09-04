@@ -45,6 +45,7 @@ a:focus{
     align-items: stretch;
 }
 #sidebar {
+    margin-left: -250px;
     min-width: 250px;
     max-width: 250px;
     background: #7386D5;
@@ -52,7 +53,7 @@ a:focus{
     transition: all 0.3s;
 }
 #sidebar.active{
-	margin-left: -250px;
+	margin-left: 0px;
 }
 
 #sidebar .sidebar-header{
@@ -227,3 +228,10 @@ h2{
     text-align: left;
  }
 
+ .boards{
+    overflow: hidden;
+ }
+.boards .board{
+	float: left;
+    width: 27%;
+}

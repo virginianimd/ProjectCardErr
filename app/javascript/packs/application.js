@@ -12,10 +12,26 @@ import "bootstrap"
 import '../stylesheets/application'
 
 $(document).ready(function(){
+    
+    $( "#contain" ).animate({
+        'margin-left': 0
+    }, 400 );
+
     $('#sidebarCollapse').on('click',function(){
         $('#sidebar').toggleClass('active');
+        
+        
     });
 }); 
+
+$(function() {
+    $('[data-toggle="popover"]').popover({
+          html: true,
+          content: function() {
+              return $('#popover-content').html();
+          }
+    });
+  });
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
