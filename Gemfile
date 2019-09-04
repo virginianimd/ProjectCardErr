@@ -53,3 +53,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 gem 'font-awesome-sass', '~> 5.5', '>= 5.5.0.1'
+gem 'image_processing', '~> 1.2'
