@@ -10,6 +10,7 @@ require("channels")
 
 import "bootstrap"
 import '../stylesheets/application'
+import '../stylesheets/table'
 
 $(document).ready(function(){
     
@@ -24,14 +25,6 @@ $(document).ready(function(){
     });
 }); 
 
-$(function() {
-    $('[data-toggle="popover"]').popover({
-          html: true,
-          content: function() {
-              return $('#popover-content').html();
-          }
-    });
-  });
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

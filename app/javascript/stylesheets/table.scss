@@ -1,0 +1,139 @@
+.tb-custom {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+td:hover {
+    background-color: indianred;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.438);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 5px 4px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.tab-strip {
+    background-color: burlywood;
+}
+
+th {
+    color: oldlace;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.th-custom {
+    background: palevioletred;
+}
+
+td {
+    font-size: 16px;
+}
+
+.btn-cst {
+    text-decoration-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+    /* Green */
+}
+
+.button1:hover {
+    background-color: red;
+    /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 5px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid hotpink;
+    /* Green */
+}
+
+.button2:hover {
+    background-color: hotpink;
+    /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 5px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button3 {
+    background-color: darkgreen;
+    color: white;
+    border: 2px solid darkgreen;
+    /* Green */
+}
+
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid darkgreen;
+}
+
+.button3:hover {
+    background-color: green;
+    /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 5px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button4:hover {
+    background-color: green;
+    /* Green */
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 5px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid yellow;
+}
+
+.button5:hover {
+    background-color: yellow;
+    color: brown;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.24), 0 5px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button6 {
+    background-color: white;
+    color: black;
+    border: 2px solid royalblue;
+}
+
+.button6:hover {
+    background-color: royalblue;
+    color: white;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.24), 0 5px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+.font-show {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    letter-spacing: 4.8px;
+    word-spacing: 3px;
+    color: #000000;
+    font-weight: 400;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: none;
+}
+

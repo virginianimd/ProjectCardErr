@@ -13,14 +13,22 @@
         <div class = "col-md-10">
             <div class = "boards" >
       <% @boards.each do |board| %>
-              <ul id="popover-content" class="list-group" style="display: none">
-                <a><%= link_to 'Edit', edit_board_path(board) %></a>
-                <a href="#" class="list-group-item">Invite Members</a>
-                <a class= "list-group-item"><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></a>
-              </ul>
           <div class = board>
           <div class="card col-md-12 ">
-          <a data-toggle="popover" title="Action" style= "text-align: right">:::</a>
+             <div class="dropdown" style="text-align: right;">
+  <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+   :::
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+  <center><strong>Action</strong></center>
+  <div class="dropdown-divider "></div>
+  
+  <%= link_to 'Edit', edit_board_path(board), class: "dropdown-item" %>
+   <%= link_to 'Delete', board, method: :delete, data: { confirm: 'Are you sure?' }, class: "dropdown-item" %>
+</div>
+</div>
+         
             &nbsp;  
               <div class="accordion" id="accordionExample<%= board.id %>">
                 <div class="card">               

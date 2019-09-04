@@ -1,19 +1,22 @@
+
 <p id="notice"><%= notice %></p>
-
+<div class="wrapper-show font-show">
+<h3 align="center">Info Board</h3>
 <p>
-  <strong>Title:</strong>
-  <%= @board.title %>
+  <h6 class="form-group">Title</h6><div class="form-control">
+  <%= @board.title %></div>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @board.description %>
+  <h6 class="form-group-control" style="font-style:italic;">Description</h6><div class="form-control">
+  <%= @board.description %></div>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @board.user.username %>
+  <h6 class="form-group-control">User</h6><div class="form-control">
+  <%= @board.user.username %></div>
 </p>
-<%= link_to 'New Card', new_card_path %>
-<%= link_to 'Edit', edit_board_path(@board) %> |
-<%= link_to 'Back', boards_path %>
+<%= link_to 'New Card', new_card_path ,class:'btn button6'%>
+<%= link_to 'Edit', edit_board_path(@board),class:'btn button5' %> 
+<%= link_to 'Back', boards_path,class:'btn button1' %>
+</div>

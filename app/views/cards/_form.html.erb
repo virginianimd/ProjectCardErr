@@ -10,38 +10,42 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="wrapper">
+  <h1 align="center">New Card</h1>
+  <div class="form-group">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, class:'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :tipe %>
-    <%= form.text_field :tipe %>
+    <%= form.text_field :tipe, class:'form-control', class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id, :value => current_user.username %>
+  <div class="form-group">
+    <%= form.label :user_id, :value => current_user.username, class:'form-control' %>
     <%= form.hidden_field :user_id, :value => current_user.id %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :board_id %>
-    <%= form.number_field :board_id, :value => 5 %>
+    <%= form.number_field :board_id, :value => 5, class:'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.number_field :status %>
+  <div class="form-group ">
+    <%= form.label :status%>
+    <%= form.number_field :status, class:'form-control'  %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="button">
+    <%= form.submit class:'btn button4' %>
+   <%= link_to 'Back', cards_path, class:'btn button1   '%> 
+  </div>
   </div>
 <% end %>
+<br>
