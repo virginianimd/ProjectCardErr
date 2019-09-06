@@ -1,0 +1,54 @@
+.containfeature{
+    width : 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    flex-direction: row;
+    background-color: #e5e6eb;
+    padding: 40px;
+    z-index: -1;
+  }
+  .box{
+    width: 300px;
+    height: 350px;
+    background-color:white;
+    box-shadow: 0px 0px 7px 3px gray;
+    text-align: left;
+    margin: 25px auto;
+    border-radius: 15px;
+    align-items: center;
+     padding: 20px;
+  }
+  .box-sub{
+    margin-top:0px;
+    height: 60px;
+    background-color:#c0c2ce;
+    line-height: 90px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 10px;
+    font-weight:500;  
+    border-radius:15px 15px 0px 0px;
+    padding: 20px;
+    
+  }
+  .header-title{
+    position: relative;
+    justify-content: space-around;
+    height: 50px;
+    margin-top: 20px;
+  }
+  .text{
+    font-size: 14px;
+    overflow: hidden;
+     text-overflow: ellipsis;
+     display: -webkit-box;
+     line-height: 16px;     /* fallback */
+     max-height: 32px;      /* fallback */
+     -webkit-line-clamp: 3; /* number of lines to show */
+     -webkit-box-orient: vertical;
+  
+  }
