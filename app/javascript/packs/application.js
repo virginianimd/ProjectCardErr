@@ -25,8 +25,9 @@ $(document).ready(function(){
         
     });
 }); 
-
-$('img').attr('src', URL.createObjectURL(this.files[0]))
+function showing() {
+    alert('you click this board');
+}
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

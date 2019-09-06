@@ -6,7 +6,7 @@
 </div>
   <div class="containfeature">
     <% @boards.each do |board| %>
-      <div class ="box">
+     <div class = "box" onclick = "showing()" >  
         <div class="dropdown" style="text-align: right;">
           <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
             :::
@@ -21,6 +21,9 @@
         </div>
         <div class="text">
           <%= board.title %>
+        </div>
+        <div class="footer-board">
+        <%= link_to 'Go To Board', board , :class =>"btn btn-primary btn-lg btn-block" %>
         </div>
       </div>  
     <% end %>
