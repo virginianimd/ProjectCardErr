@@ -4,7 +4,8 @@ class ListsController < ApplicationController
   # GET /lists
   # GET /lists.json
   def index
-    @lists = List.all
+    @board= Board.find(params[:board_id])
+    @lists = @board.lists
   end
 
   # GET /lists/1
