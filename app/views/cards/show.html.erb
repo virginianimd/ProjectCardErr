@@ -1,38 +1,34 @@
 <p id="notice"><%= notice %></p>
-<div class="wrapper-show font-show">
-<h3 align="center">Info Card</h3>
+
 <p>
-  <h6 class="form-group">Title</h6><div class="form-control">
-  <%= @card.title %></div>
+  <strong>List:</strong>
+  <%= @card.list %>
 </p>
 
 <p>
-  <h6 class="form-group">Content</h6><div class="form-control">
-  <%= @card.content %></div>
+  <strong>Name:</strong>
+  <%= @card.name %>
 </p>
 
 <p>
-  <h6 class="form-group">Tipe</h6><div class="form-control">
-  <%= @card.tipe %></div>
+  <strong>Position:</strong>
+  <%= @card.position %>
 </p>
 
 <p>
-  <h6 class="form-group">User</h6><div class="form-control">
-  <%= @card.user.username %></div>
+  <strong>Tipe:</strong>
+  <%= @card.tipe %>
 </p>
 
 <p>
-   <h6 class="form-group">Board</h6><div class="form-control">
-  <%= @card.board.title %></div>
+  <strong>User:</strong>
+  <%= @card.user_id %>
 </p>
 
 <p>
-  <h6 class="form-group">Status:</h6><div class="form-control">
-  <%= @card.status %></div>
+  <strong>Status:</strong>
+  <%= @card.status %>
 </p>
 
-<%= link_to 'Edit', edit_card_path(@card),class:'btn button5' %>  
-<%= link_to 'Back', cards_path,class:'btn button1'  %>
- 
-</div>
-<br/>
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

@@ -1,38 +1,37 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'New Card', new_card_path, class:'btn button2 ' %>
-<hr size="4px">
-<h1 class="tb-custom">Cards</h1>
-<div class="table-responsive">
-<table class="table table-bordered table-striped-orange   center  table-hover table-custom-hover">
+
+<h1>Cards</h1>
+
+<table>
   <thead>
     <tr>
-      <th class="tb-custom th-custom">Id Card</th>
-      <th class="tb-custom th-custom">Title</th>
-      <th class="tb-custom th-custom">Content</th>
-      <th class="tb-custom th-custom">Tipe</th>
-      <th class="tb-custom th-custom">User</th>
-      <th class="tb-custom th-custom">Board</th>
-      <th class="tb-custom th-custom">Status</th>
-      <th colspan="3" class="tb-custom th-custom">Aksi</th>
+      <th>List</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Tipe</th>
+      <th>User</th>
+      <th>Status</th>
+      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @cards.each do |card| %>
       <tr>
-        <td class="tb-custom"><%= card.id %></td>
-        <td class="tb-custom"><%= card.title %></td>
-        <td class="tb-custom"><%=  card.content %></td>
-        <td class="tb-custom"><%= card.tipe %></td>
-        <td class="tb-custom"><%= card.user.username %></td>
-        <td class="tb-custom"><%= card.board_id %></td>
-        <td class="tb-custom"><%= card.status %></td>
-        <td class="tb-custom a"><%= link_to 'Show', card %></td>
-        <td class="tb-custom a"><%= link_to 'Edit', edit_card_path(card) %></td>
-        <td class="tb-custom a"><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= card.list %></td>
+        <td><%= card.name %></td>
+        <td><%= card.position %></td>
+        <td><%= card.tipe %></td>
+        <td><%= card.user_id %></td>
+        <td><%= card.status %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-</div>
+
 <br>
+
+<%= link_to 'New Card', new_card_path %>

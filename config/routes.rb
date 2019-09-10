@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :boards
+  resources :boards do
+  resources :lists
+  end
   resources :cards
   resources :boardmembers
   devise_for :users

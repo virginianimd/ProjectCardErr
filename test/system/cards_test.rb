@@ -14,11 +14,11 @@ class CardsTest < ApplicationSystemTestCase
     visit cards_url
     click_on "New Card"
 
-    fill_in "Board", with: @card.board_id
-    fill_in "Content", with: @card.content
+    fill_in "List", with: @card.list
+    fill_in "Name", with: @card.name
+    fill_in "Position", with: @card.position
     fill_in "Status", with: @card.status
     fill_in "Tipe", with: @card.tipe
-    fill_in "Title", with: @card.title
     fill_in "User", with: @card.user_id
     click_on "Create Card"
 
@@ -30,11 +30,11 @@ class CardsTest < ApplicationSystemTestCase
     visit cards_url
     click_on "Edit", match: :first
 
-    fill_in "Board", with: @card.board_id
-    fill_in "Content", with: @card.content
+    fill_in "List", with: @card.list
+    fill_in "Name", with: @card.name
+    fill_in "Position", with: @card.position
     fill_in "Status", with: @card.status
     fill_in "Tipe", with: @card.tipe
-    fill_in "Title", with: @card.title
     fill_in "User", with: @card.user_id
     click_on "Update Card"
 
