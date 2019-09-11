@@ -23,7 +23,7 @@
           <%= board.title %>
         </div>
         <div class="footer-board">
-        <%= link_to 'Go To Board', board , :class =>"btn btn-primary btn-lg btn-block" %>
+        <%= link_to 'Go To Board', board_lists_path(board) , :class =>"btn btn-primary btn-lg btn-block" %>
         </div>
       </div>  
     <% end %>
