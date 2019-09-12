@@ -1,37 +1,33 @@
-
-<p id="notice"><%= notice %></p>
-
-<%= link_to 'New Board', new_board_path,class: 'btn button6  ' %>
-<hr size="4px">
-&nbsp;
-<h1 class="tb-custom">Table Boards</h1>
-<div class="table-responsive">
-<table class="table table-bordered table-striped-orange   center  table-hover table-custom-hover">
-  <thead>
-    <tr>
-      <th class="tb-custom th-custom">Id Board</th>
-      <th class="tb-custom th-custom">Title</th>
-      <th class="tb-custom th-custom">Description</th>
-      <th class="tb-custom th-custom">User</th>
-      <th colspan="3" class="tb-custom th-custom">Aksi</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @boards.each do |board| %>
-      <tr>
-        <td class="tb-custom"><%= board.id %></td>
-        <td class="tb-custom"><%= board.title %></td>
-        <td class="tb-custom"><%= board.description %></td>
-        <td class="tb-custom"><%= board.user.username %></td>
-        <td class="tb-custom a"><%= link_to 'Show', board %></td>
-        <td class="tb-custom a"><%= link_to 'Edit', edit_board_path(board) %></td>
-        <td class="tb-custom a"><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class = "header-title containfeature"> 
+ <h2>Your Search</h2>
 </div>
-<br>
+  <div class="containfeature">
+    <% @boards.each do |board| %>
+     <div class = "box" onclick = "showing()" >  
+        <div class="dropdown" style="text-align: right;">
+          <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            :::
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <center><strong>Action</strong></center>
+            <div class="dropdown-divider "></div>
+            <%= link_to 'Add New board',new_board_list_path(board), class: "dropdown-item" %>
+            <%= link_to 'Edit', edit_board_path(board), class: "dropdown-item" %>
+            <%= link_to 'Delete', board, method: :delete, data: { confirm: 'Are you sure?' }, class: "dropdown-item" %>
+          </div>
+        </div>
+        <div class="text">
+          <%= board.title %>
+        </div>
+        <div class="footer-board">
+        <%= link_to 'Go To Board', board_lists_path(board) , :class =>"btn btn-primary btn-lg btn-block" %>
+        </div>
+      </div>  
+    <% end %>
+    <div class ="box">
+      <h1 style="margin:34%; font-size: 98px;"><%= link_to '+',new_board_path %></h1>
+    </div>
+  </div>
+
 
 

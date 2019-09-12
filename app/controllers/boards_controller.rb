@@ -4,7 +4,7 @@ class BoardsController < ApplicationController
   # GET /boards
   # GET /boards.json
   def index
-    @boards = Board.select{|b| b.user_id == current_user.id}
+    @boards = Board.where(["title LIKE ? and user_id ?","%#{params[:search]}%","%#{current_user.id}%"])
   end
 
   # GET /boards/1

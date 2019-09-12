@@ -18,6 +18,13 @@ class ListsController < ApplicationController
     @list = List.new
   end
 
+  def new_list
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   # GET /lists/1/edit
   def edit
   end

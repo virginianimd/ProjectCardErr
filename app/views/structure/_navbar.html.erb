@@ -10,11 +10,11 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto" style="margin:0 18px;">
       <li>
-        <form class="container form-inline fixed top" style = "text-align: center;">
-          <div align="container flex-end"> <input class="form-control" type="search" size="100px" style="margin:0px; min-width:160px; width:65%;" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit"><i class="fa fa-search"></i></button>
-          </div>
-        </form>
+      <%= form_tag boards_path, class: "container form-inline fixed top", style:"text-align: center;", :method => 'get' do %>
+          <div align="container flex-end">  <%= text_field_tag :search, params[:search], class: 'form-control',type:"search", size: '100px', style: "margin:0px; min-width:160px; width:65%;", placeholder:"Search" %>
+            <button class="btn btn-outline-success my-2 my-sm-0 " type="submit_tag"><i class="fa fa-search"></i></button>
+          </div> 
+      <% end %>
       </li>
       <li class="nav-item active" style= "padding: ">
       

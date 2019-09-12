@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :boards do
   resources :lists
+  get "lists/new_list" => 'lists#new_list', :as => :new_list
   end
+  
   resources :cards
   resources :boardmembers
   devise_for :users
